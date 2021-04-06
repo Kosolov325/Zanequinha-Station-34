@@ -1,0 +1,1 @@
+/datum/game_mode/normal

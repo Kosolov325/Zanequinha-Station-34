@@ -1,0 +1,679 @@
+macro "macro"
+	elem 
+		name = "Space"
+		command = "KeyDownM \"jump\""
+	elem 
+		name = "Space+UP"
+		command = "KeyUpM \"jump\""
+	elem 
+		name = "West"
+		command = "KeyDownM \"west\""
+	elem 
+		name = "West+UP"
+		command = "KeyUpM \"west\""
+	elem 
+		name = "North"
+		command = "KeyDownM \"north\""
+	elem 
+		name = "North+UP"
+		command = "KeyUpM \"north\""
+	elem 
+		name = "East"
+		command = "KeyDownM \"east\""
+	elem 
+		name = "East+UP"
+		command = "KeyUpM \"east\""
+	elem 
+		name = "South"
+		command = "KeyDownM \"south\""
+	elem 
+		name = "South+UP"
+		command = "KeyUpM \"south\""
+	elem 
+		name = "1"
+		command = "switch_intent \"help\""
+	elem 
+		name = "2"
+		command = "switch_intent \"disarm\""
+	elem 
+		name = "3"
+		command = "switch_intent \"grab\""
+	elem 
+		name = "4"
+		command = "switch_intent \"hurt\""
+	elem 
+		name = "A"
+		command = "KeyDownM \"west\""
+	elem 
+		name = "A+UP"
+		command = "KeyUpM \"west\""
+	elem 
+		name = "D"
+		command = "KeyDownM \"east\""
+	elem 
+		name = "D+UP"
+		command = "KeyUpM \"east\""
+	elem 
+		name = "E"
+		command = "Pod-Enter/Exit"
+	elem 
+		name = "M"
+		command = "Mute-Music"
+	elem 
+		name = "O"
+		command = "OOC"
+	elem 
+		name = "Q"
+		command = "dropitem"
+	elem 
+		name = "R"
+		command = "toggle_throw"
+	elem 
+		name = "S"
+		command = "KeyDownM \"south\""
+	elem 
+		name = "S+UP"
+		command = "KeyUpM \"south\""
+	elem 
+		name = "T"
+		command = "Say"
+	elem 
+		name = "W"
+		command = "KeyDownM \"north\""
+	elem 
+		name = "W+UP"
+		command = "KeyUpM \"north\""
+	elem 
+		name = "X"
+		command = "swaphand"
+	elem 
+		name = "Z"
+		command = "use_hotkey"
+	elem 
+		name = "F1"
+		command = "adminhelp"
+	elem 
+		name = "SHIFT"
+		command = "KeyDownM \"shift\""
+	elem 
+		name = "SHIFT+UP"
+		command = "KeyUpM \"shift\""
+
+
+menu "menu"
+	elem 
+		name = "&File"
+		command = ""
+		saved-params = "is-checked"
+	elem 
+		name = "&Quick screenshot\tF2"
+		command = ".screenshot auto"
+		category = "&File"
+		saved-params = "is-checked"
+	elem 
+		name = "&Quit"
+		command = ".quit"
+		category = "&File"
+		saved-params = "is-checked"
+	elem 
+		name = "&Resolution"
+		command = ""
+		saved-params = "is-checked"
+	elem "stretch"
+		name = "&Stretch icons to fit"
+		command = ".winset \"mapwindow.map.icon-size=0\""
+		category = "&Resolution"
+		is-checked = true
+		can-check = true
+		group = "size"
+		saved-params = "is-checked"
+	elem 
+		name = "&Change resolution"
+		command = "Resolution"
+		category = "&Resolution"
+		saved-params = "is-checked"
+	elem "icon128"
+		name = "&128x128 Icon Size"
+		command = ".winset \"mapwindow.map.icon-size=128\""
+		category = "&Resolution"
+		can-check = true
+		group = "size"
+		saved-params = "is-checked"
+	elem "icon96"
+		name = "&96x96 Icon Size"
+		command = ".winset \"mapwindow.map.icon-size=96\""
+		category = "&Resolution"
+		can-check = true
+		group = "size"
+		saved-params = "is-checked"
+	elem "icon64"
+		name = "&64x64 Icon Size"
+		command = ".winset \"mapwindow.map.icon-size=64\""
+		category = "&Resolution"
+		can-check = true
+		group = "size"
+		saved-params = "is-checked"
+	elem "icon32"
+		name = "&32x32 Icon Size"
+		command = ".winset \"mapwindow.map.icon-size=32\""
+		category = "&Resolution"
+		can-check = true
+		group = "size"
+		saved-params = "is-checked"
+	elem 
+		name = "&Help/Administration"
+		command = ""
+		saved-params = "is-checked"
+	elem 
+		name = "&Admin help\tF1"
+		command = "adminhelp"
+		category = "&Help/Administration"
+		saved-params = "is-checked"
+
+
+window "mainwindow"
+	elem "mainwindow"
+		type = MAIN
+		pos = 281,0
+		size = 640x480
+		anchor1 = none
+		anchor2 = none
+		background-color = #000000
+		is-default = true
+		saved-params = "pos;size;is-minimized;is-maximized"
+		statusbar = false
+		icon = 'html_assets\\fortniteclient_win64_shipping_123-8.png'
+		macro = "macro"
+		menu = "menu"
+	elem "mainvsplit"
+		type = CHILD
+		pos = 0,0
+		size = 640x460
+		anchor1 = 0,0
+		anchor2 = 100,100
+		background-color = #171a2b
+		saved-params = "splitter"
+		left = "mapwindow"
+		right = "rpane"
+		is-vert = true
+		splitter = 70
+	elem "input"
+		type = INPUT
+		pos = 0,460
+		size = 601x20
+		anchor1 = 0,100
+		anchor2 = 100,100
+		text-color = #ffffff
+		background-color = #0e101b
+		is-default = true
+		border = line
+		saved-params = "command"
+	elem "saybutton"
+		type = BUTTON
+		pos = 600,460
+		size = 40x20
+		anchor1 = 100,100
+		anchor2 = none
+		text-color = #ffffff
+		background-color = #0e101b
+		border = line
+		saved-params = "is-checked"
+		text = "Hotkey"
+		command = ".winset \"saybutton.is-checked=true?input.command=\"!say \\\"\" macrobutton.is-checked=false:input.command=\""
+		button-type = pushbox
+
+window "mapwindow"
+	elem "mapwindow"
+		type = MAIN
+		pos = 281,0
+		size = 640x480
+		anchor1 = none
+		anchor2 = none
+		background-color = #000000
+		saved-params = "pos;size;is-minimized;is-maximized"
+		titlebar = false
+		statusbar = false
+		can-close = false
+		can-minimize = false
+		can-resize = false
+		is-pane = true
+	elem "map"
+		type = MAP
+		pos = 0,0
+		size = 640x480
+		anchor1 = 0,0
+		anchor2 = 100,100
+		is-default = true
+		saved-params = "zoom;letterbox;zoom-mode"
+		icon-size = 64
+		zoom = 2
+
+window "outputwindow"
+	elem "outputwindow"
+		type = MAIN
+		pos = 281,0
+		size = 640x480
+		anchor1 = none
+		anchor2 = none
+		background-color = #23263f
+		saved-params = "pos;size;is-minimized;is-maximized"
+		titlebar = false
+		statusbar = false
+		can-close = false
+		can-minimize = false
+		can-resize = false
+		is-pane = true
+	elem "output"
+		type = OUTPUT
+		pos = 0,0
+		size = 640x480
+		anchor1 = 0,0
+		anchor2 = 100,100
+		font-family = "System"
+		text-color = #ffffff
+		background-color = #171a2b
+		is-default = true
+		saved-params = "max-lines"
+		style = ".system {color:#ff0000;}"
+
+window "rpane"
+	elem "rpane"
+		type = MAIN
+		pos = 281,0
+		size = 640x480
+		anchor1 = none
+		anchor2 = none
+		background-color = #171a2b
+		saved-params = "pos;size;is-minimized;is-maximized"
+		titlebar = false
+		statusbar = false
+		can-close = false
+		can-minimize = false
+		can-resize = false
+		is-pane = true
+	elem "child1"
+		type = CHILD
+		pos = 0,0
+		size = 640x480
+		anchor1 = 0,0
+		anchor2 = 100,100
+		background-color = #171a2b
+		is-default = true
+		saved-params = "splitter"
+		left = "infowindow"
+		right = "outputwindow"
+		is-vert = false
+
+window "browserwindow"
+	elem "browserwindow"
+		type = MAIN
+		pos = 281,0
+		size = 640x480
+		anchor1 = none
+		anchor2 = none
+		background-color = #000000
+		saved-params = "pos;size;is-minimized;is-maximized"
+		title = "Browser"
+		titlebar = false
+		statusbar = false
+		can-close = false
+		can-minimize = false
+		can-resize = false
+		is-pane = true
+	elem "browser"
+		type = BROWSER
+		pos = 0,0
+		size = 640x480
+		anchor1 = 0,0
+		anchor2 = 100,100
+		background-color = #000000
+		is-default = true
+		saved-params = ""
+		on-show = ".winset\"rpane.infob.is-visible=true?rpane.infob.pos=130,0;rpane.textb.is-visible=true;rpane.browseb.is-visible=true;rpane.browseb.is-checked=true;rpane.rpanewindow.pos=0,30;rpane.rpanewindow.size=0x0;rpane.rpanewindow.left=browserwindow\""
+		on-hide = ".winset\"rpane.browseb.is-visible=false;rpane.infob.is-visible=true?rpane.infob.is-checked=true rpane.infob.pos=65,0 rpane.rpanewindow.left=infowindow:rpane.rpanewindow.left=textwindow rpane.textb.is-visible=false rpane.rpanewindow.pos=0,0 rpane.rpanewindow.size=0x0\""
+
+window "infowindow"
+	elem "infowindow"
+		type = MAIN
+		pos = 281,0
+		size = 640x480
+		anchor1 = none
+		anchor2 = none
+		background-color = #171a2b
+		saved-params = "pos;size;is-minimized;is-maximized"
+		title = "Info"
+		titlebar = false
+		statusbar = false
+		can-close = false
+		can-minimize = false
+		can-resize = false
+		is-pane = true
+	elem "button4"
+		type = BUTTON
+		pos = 424,8
+		size = 208x24
+		anchor1 = 66,2
+		anchor2 = 99,7
+		text-color = #00ff00
+		background-color = #2e3252
+		saved-params = "is-checked"
+		text = "Github"
+		command = "github"
+	elem "button2"
+		type = BUTTON
+		pos = 216,8
+		size = 208x24
+		anchor1 = 34,2
+		anchor2 = 66,7
+		text-color = #ffff00
+		background-color = #2e3252
+		saved-params = "is-checked"
+		text = "Sandbox Panel"
+		command = "Sandbox-Panel"
+	elem "button1"
+		type = BUTTON
+		pos = 8,8
+		size = 208x24
+		anchor1 = 1,2
+		anchor2 = 34,7
+		text-color = #8080ff
+		background-color = #2e3252
+		saved-params = "is-checked"
+		text = "Discord"
+		command = "discord"
+	elem "info"
+		type = INFO
+		pos = 0,40
+		size = 640x440
+		anchor1 = 0,8
+		anchor2 = 100,100
+		text-color = #ffffff
+		background-color = #252841
+		is-default = true
+		drop-zone = false
+		saved-params = ""
+		highlight-color = #ff0080
+		tab-text-color = #ffffff
+		tab-background-color = #171a2b
+		allow-html = false
+		on-show = ".winset\"rpane.infob.is-visible=true;rpane.browseb.is-visible=true?rpane.infob.pos=130,0:rpane.infob.pos=65,0 rpane.textb.is-visible=true rpane.infob.is-checked=true rpane.rpanewindow.pos=0,30 rpane.rpanewindow.size=0x0 rpane.rpanewindow.left=infowindow\""
+		on-hide = ".winset\"rpane.infob.is-visible=false;rpane.browseb.is-visible=true?rpane.browseb.is-checked=true rpane.rpanewindow.left=browserwindow:rpane.textb.is-visible=false rpane.rpanewindow.pos=0,0 rpane.rpanewindow.size=0x0 rpane.rpanewindow.left=\""
+		prefix-color = #ff8000
+		suffix-color = #ffff00
+
+window "neatbeats"
+	elem "neatbeats"
+		type = MAIN
+		pos = 497,344
+		size = 440x144
+		anchor1 = none
+		anchor2 = none
+		background-color = none
+		is-visible = false
+		is-default = true
+		saved-params = "pos;size;is-minimized;is-maximized"
+		title = "Neat Beats Instruments"
+		statusbar = false
+		can-resize = false
+		macro = "macro1"
+	elem "button26"
+		type = BUTTON
+		pos = 224,48
+		size = 216x96
+		anchor1 = none
+		anchor2 = none
+		background-color = none
+		saved-params = "is-checked"
+		text = "Play Premade"
+		command = "premadesong"
+	elem "button25"
+		type = BUTTON
+		pos = 224,24
+		size = 216x24
+		anchor1 = none
+		anchor2 = none
+		background-color = none
+		saved-params = "is-checked"
+		text = "Switch Octave"
+		command = "octave"
+	elem "button24"
+		type = BUTTON
+		pos = 224,0
+		size = 216x24
+		anchor1 = none
+		anchor2 = none
+		background-color = none
+		saved-params = "is-checked"
+		text = "Switch Instrument"
+		command = "instrument"
+	elem "button23"
+		type = BUTTON
+		pos = 112,120
+		size = 112x24
+		anchor1 = none
+		anchor2 = none
+		background-color = none
+		saved-params = "is-checked"
+		text = "B"
+		command = "note \"B\""
+	elem "button22"
+		type = BUTTON
+		pos = 112,96
+		size = 112x24
+		anchor1 = none
+		anchor2 = none
+		background-color = none
+		saved-params = "is-checked"
+		text = "A#"
+		command = "note \"A#\""
+	elem "button21"
+		type = BUTTON
+		pos = 112,72
+		size = 112x24
+		anchor1 = none
+		anchor2 = none
+		background-color = none
+		saved-params = "is-checked"
+		text = "A"
+		command = "note \"A\""
+	elem "button20"
+		type = BUTTON
+		pos = 112,48
+		size = 112x24
+		anchor1 = none
+		anchor2 = none
+		background-color = none
+		saved-params = "is-checked"
+		text = "G#"
+		command = "note \"G#\""
+	elem "button19"
+		type = BUTTON
+		pos = 112,24
+		size = 112x24
+		anchor1 = none
+		anchor2 = none
+		background-color = none
+		saved-params = "is-checked"
+		text = "G"
+		command = "note \"G\""
+	elem "button18"
+		type = BUTTON
+		pos = 112,0
+		size = 112x24
+		anchor1 = none
+		anchor2 = none
+		background-color = none
+		saved-params = "is-checked"
+		text = "F#"
+		command = "note \"F#\""
+	elem "button17"
+		type = BUTTON
+		pos = 0,120
+		size = 112x24
+		anchor1 = none
+		anchor2 = none
+		background-color = none
+		saved-params = "is-checked"
+		text = "F"
+		command = "note \"F\""
+	elem "button16"
+		type = BUTTON
+		pos = 0,96
+		size = 112x24
+		anchor1 = none
+		anchor2 = none
+		background-color = none
+		saved-params = "is-checked"
+		text = "E"
+		command = "note \"E\""
+	elem "button15"
+		type = BUTTON
+		pos = 0,72
+		size = 112x24
+		anchor1 = none
+		anchor2 = none
+		background-color = none
+		saved-params = "is-checked"
+		text = "D#"
+		command = "note \"D#\""
+	elem "button14"
+		type = BUTTON
+		pos = 0,48
+		size = 112x24
+		anchor1 = none
+		anchor2 = none
+		background-color = none
+		saved-params = "is-checked"
+		text = "D"
+		command = "note \"D\""
+	elem "button12"
+		type = BUTTON
+		pos = 0,24
+		size = 112x24
+		anchor1 = none
+		anchor2 = none
+		background-color = none
+		saved-params = "is-checked"
+		text = "C#"
+		command = "note \"C#\""
+	elem "button5"
+		type = BUTTON
+		pos = 0,0
+		size = 112x24
+		anchor1 = none
+		anchor2 = none
+		background-color = none
+		saved-params = "is-checked"
+		text = "C"
+		command = "note \"C\""
+	elem "button13"
+		type = BUTTON
+		pos = -301,-236
+		size = 52x7
+		anchor1 = 78,70
+		anchor2 = 88,75
+		background-color = none
+		saved-params = "is-checked"
+		text = "F#"
+		command = "note \"F#\""
+	elem "button11"
+		type = BUTTON
+		pos = -301,-202
+		size = 52x7
+		anchor1 = 78,95
+		anchor2 = 88,100
+		background-color = none
+		saved-params = "is-checked"
+		text = "B"
+		command = "note \"B\""
+	elem "button10"
+		type = BUTTON
+		pos = -301,-209
+		size = 52x7
+		anchor1 = 78,90
+		anchor2 = 88,95
+		background-color = none
+		saved-params = "is-checked"
+		text = "A#"
+		command = "note \"A#\""
+	elem "button9"
+		type = BUTTON
+		pos = -301,-215
+		size = 52x6
+		anchor1 = 78,85
+		anchor2 = 88,90
+		background-color = none
+		saved-params = "is-checked"
+		text = "A"
+		command = "note \"A\""
+	elem "button8"
+		type = BUTTON
+		pos = -301,-222
+		size = 52x7
+		anchor1 = 78,80
+		anchor2 = 88,85
+		background-color = none
+		saved-params = "is-checked"
+		text = "G#"
+		command = "note \"G#\""
+	elem "button7"
+		type = BUTTON
+		pos = -301,-229
+		size = 52x7
+		anchor1 = 78,75
+		anchor2 = 88,80
+		background-color = none
+		saved-params = "is-checked"
+		text = "G"
+		command = "note \"G\""
+	elem "button6"
+		type = BUTTON
+		pos = -349,-202
+		size = 48x7
+		anchor1 = 67,95
+		anchor2 = 78,100
+		background-color = none
+		saved-params = "is-checked"
+		text = "F"
+		command = "note \"F\""
+	elem "button4"
+		type = BUTTON
+		pos = -349,-215
+		size = 48x6
+		anchor1 = 67,85
+		anchor2 = 78,90
+		background-color = none
+		saved-params = "is-checked"
+		text = "D#"
+		command = "note \"D#\""
+	elem "button3"
+		type = BUTTON
+		pos = -349,-222
+		size = 48x7
+		anchor1 = 67,80
+		anchor2 = 78,85
+		background-color = none
+		saved-params = "is-checked"
+		text = "D"
+		command = "note \"D\""
+	elem "button2"
+		type = BUTTON
+		pos = -349,-229
+		size = 48x7
+		anchor1 = 67,75
+		anchor2 = 78,80
+		background-color = none
+		saved-params = "is-checked"
+		text = "C#"
+		command = "note \"C#\""
+	elem "button1"
+		type = BUTTON
+		pos = -349,-236
+		size = 48x7
+		anchor1 = 67,70
+		anchor2 = 78,75
+		background-color = none
+		saved-params = "is-checked"
+		text = "C"
+		command = "note \"C\""
+

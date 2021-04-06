@@ -1,0 +1,75 @@
+"a" = (/turf/space,/area)
+"b" = (/obj/lattice,/turf/space,/area)
+"c" = (/turf/simulated/wall,/area/chapel/main)
+"d" = (/obj/window_spawner,/turf/simulated/floor/plating,/area/chapel/main)
+"e" = (/obj/item/weapon/flex_tape{color = "blue"; desc = "It can seal anything holy!"; name = "Holy Flex Tape"},/turf/simulated/floor{icon_state = "carpet"},/area/chapel/main)
+"f" = (/turf/simulated/floor{icon_state = "carpet"},/area/chapel/main)
+"g" = (/obj/landmark/start{name = "Chaplain"},/obj/stool/chair,/turf/simulated/floor{icon_state = "carpet"},/area/chapel/main)
+"h" = (/obj/morgue,/turf/simulated/floor{fully_cover = 1; icon_state = "table2"; TurfHeight = 4},/area/chapel/main)
+"i" = (/obj/cable{icon_state = "0-2"; d2 = 2},/obj/machinery/power/apc{dir = 1; name = "Chapel APC"; pixel_y = 24},/turf/simulated/floor{fully_cover = 1; icon_state = "table2"; TurfHeight = 4},/area/chapel/main)
+"j" = (/obj/closet/coffin,/turf/simulated/floor{fully_cover = 1; icon_state = "table2"; TurfHeight = 4},/area/chapel/main)
+"k" = (/obj/item/weapon/mop{color = "green"; desc = "A powerfull relic that destroy any dirty s#it in his path!"; name = "Sacred mop"},/turf/simulated/floor{fully_cover = 1; icon_state = "table2"; TurfHeight = 4},/area/chapel/main)
+"l" = (/obj/crematorium,/turf/simulated/floor{fully_cover = 1; icon_state = "table2"; TurfHeight = 4},/area/chapel/main)
+"m" = (/obj/item/weapon/paper_bin,/obj/item/weapon/pen,/obj/item/weapon/hand_labeler,/turf/simulated/floor{icon_state = "ikeatable"; TurfHeight = 4},/area/chapel/main)
+"n" = (/obj/item/weapon/clipboard,/obj/item/weapon/dabdollar/c500,/turf/simulated/floor{icon_state = "ikeatable"; TurfHeight = 4},/area/chapel/main)
+"o" = (/obj/deskclutter,/obj/item/weapon/reagent_containers/food/snacks/donut{color = "red"; desc = "Goes great with holy Robust Coffee."; name = "Holy donut"},/turf/simulated/floor{icon_state = "ikeatable"; TurfHeight = 4},/area/chapel/main)
+"p" = (/obj/crate/bin,/turf/simulated/floor{icon_state = "carpet"},/area/chapel/main)
+"q" = (/obj/cable{icon_state = "1-2"; d1 = 1; d2 = 2},/turf/simulated/floor{fully_cover = 1; icon_state = "table2"; TurfHeight = 4},/area/chapel/main)
+"r" = (/turf/simulated/floor{fully_cover = 1; icon_state = "table2"; TurfHeight = 4},/area/chapel/main)
+"s" = (/turf/simulated/floor{icon_state = "dark"},/area/chapel/main)
+"t" = (/obj/rack,/turf/simulated/floor{icon_state = "dark"},/area/chapel/main)
+"u" = (/obj/reagent_dispensers/watertank{desc = "A holy watertank"; name = "holy watertank"},/turf/simulated/floor{icon_state = "dark"},/area/chapel/main)
+"v" = (/obj/closet/wardrobe/black{color = "green"; desc = "Sacred Black clothes"; name = "Divine Black Wardrobe"},/turf/simulated/floor{icon_state = "dark"},/area/chapel/main)
+"w" = (/obj/item/weapon/extinguisher{color = "cyan"; desc = "Holy"; name = "Holy extinguisher"},/turf/simulated/floor{icon_state = "carpet"},/area/chapel/main)
+"x" = (/obj/machinery/door{icon = 'icons/obj/doors/doormorgue.dmi'; name = "Chaplain's Office"; req_access_txt = "22"},/obj/item/weapon/bananapeel{desc = "You have been honked. HONK."; name = "Honk"},/turf/simulated/floor{icon_state = "dark"},/area/chapel/main)
+"y" = (/obj/machinery/door{icon = 'icons/obj/doors/doormorgue.dmi'; name = "Coffin Storage"; req_access_txt = "22"},/obj/cable{icon_state = "1-2"; d1 = 1; d2 = 2},/turf/simulated/floor{icon_state = "dark"},/area/chapel/main)
+"z" = (/turf/simulated/wall/r_wall,/area/turret_protected/ai)
+"A" = (/turf/simulated/floor{icon_state = "ikeatable"; TurfHeight = 4},/area/chapel/main)
+"B" = (/obj/item/weapon/paper{color = "yellow"; desc = "Divine Paper"; name = "Holy Paper"},/turf/simulated/floor{icon_state = "ikeatable"; TurfHeight = 4},/area/chapel/main)
+"C" = (/obj/cable{icon_state = "2-4"; d1 = 2; d2 = 4},/turf/simulated/floor{icon_state = "dark"},/area/chapel/main)
+"D" = (/obj/cable{d1 = 1; d2 = 8; icon_state = "1-8"},/turf/simulated/floor{icon_state = "dark"},/area/chapel/main)
+"E" = (/turf/simulated/floor{icon_state = "white"},/area/turret_protected/ai)
+"F" = (/obj/stool,/turf/simulated/floor{icon_state = "carpet"},/area/chapel/main)
+"G" = (/obj/cable{icon_state = "4-8"; d1 = 4; d2 = 8},/turf/simulated/floor{icon_state = "dark"},/area/chapel/main)
+"H" = (/obj/cable{icon_state = "4-8"; d1 = 4; d2 = 8},/turf/simulated/wall/r_wall,/area/turret_protected/ai)
+"I" = (/obj/cable{icon_state = "4-8"; d1 = 4; d2 = 8},/turf/simulated/floor{icon_state = "white"},/area/turret_protected/ai)
+"J" = (/obj/landmark/start{name = "AI"},/obj/cable{icon_state = "4-8"; d1 = 4; d2 = 8},/obj/item/device/radio/intercom{broadcasting = 1; pixel_y = 20},/obj/item/device/radio/intercom{broadcasting = 0; frequency = 1447; pixel_x = 20; pixel_y = 20},/obj/item/device/radio/intercom{broadcasting = 1; frequency = 1447; pixel_x = -20; pixel_y = 20},/turf/simulated/floor{icon_state = "white"},/area/turret_protected/ai)
+"K" = (/obj/cable{d2 = 8; icon_state = "0-8"},/obj/machinery/power/apc{dir = 1; equip_consumption = 100; light_consumption = 50; name = "AI Chamber APC"; pixel_x = 24; pixel_y = 0; pixel_z = 0},/turf/simulated/floor{icon_state = "white"},/area/turret_protected/ai)
+"L" = (/obj/stool,/obj/item/device/radio/intercom{frequency = 1443; name = "Confession Intercom"; pixel_y = 24},/turf/simulated/floor{icon_state = "dark"},/area/chapel/main)
+"M" = (/obj/machinery/door{icon = 'icons/obj/doors/doormorgue.dmi'; name = "Confession Booth (Chaplain)"; req_access_txt = "22"},/turf/simulated/floor{icon_state = "dark"},/area/chapel/main)
+"N" = (/obj/stool{color = "green"; desc = "A holy stool"; name = "holy stool"},/turf/simulated/floor{icon_state = "carpet"},/area/chapel/main)
+"O" = (/obj/landmark/start{name = "Assistant"},/obj/stool,/turf/simulated/floor{icon_state = "carpet"},/area/chapel/main)
+"P" = (/obj/stool,/obj/item/device/radio/intercom{frequency = 1443; name = "Confession Intercom"; pixel_y = -24},/turf/simulated/floor{icon_state = "dark"},/area/chapel/main)
+"Q" = (/obj/machinery/door{icon = 'icons/obj/doors/doormorgue.dmi'; name = "Confession Booth"; req_access_txt = "0"},/turf/simulated/floor{icon_state = "dark"},/area/chapel/main)
+"R" = (/obj/cable{icon_state = "1-2"; d1 = 1; d2 = 2},/turf/simulated/floor{icon_state = "carpet"},/area/chapel/main)
+"S" = (/obj/crate/bin,/turf/simulated/floor{icon_state = "dark"},/area/chapel/main)
+"T" = (/obj/cable{icon_state = "1-2"; d1 = 1; d2 = 2},/turf/simulated/floor{icon_state = "dark"},/area/chapel/main)
+"U" = (/obj/window_spawner,/turf/simulated/grass,/area/chapel/main)
+"V" = (/obj/structure/forest/deco1,/turf/simulated/grass,/area/chapel/main)
+"W" = (/obj/structure/forest/deco1,/obj/mopbucket{color = "cyan"; desc = "Fill it with holy water, but don't forget a holy mop!"; name = "Divine mop bucket"},/turf/simulated/grass,/area/chapel/main)
+"X" = (/obj/crate/bin{color = "purple"; desc = "A holy large bin."; name = "Large holy bin"},/turf/simulated/floor{icon_state = "dark"},/area/chapel/main)
+"Y" = (/obj/machinery/door/airlock/glass,/obj/item/weapon/mousetrap{color = "cyan"; desc = "A handy little spring-loaded trap for catching pesty unholy rodents."; name = "divine mousetrap"},/turf/simulated/floor{icon_state = "dark"},/area/chapel/main)
+"Z" = (/obj/machinery/door/airlock/glass,/obj/cable{icon_state = "1-2"; d1 = 1; d2 = 2},/turf/simulated/floor{icon_state = "dark"},/area/chapel/main)
+
+(1,1,1) = {"
+aaaaaaaaaaaaaaaaaaaa
+aaaaaabaaaabaaaaaaaa
+cdddddcbaabcccccccaa
+cefgffcbaabchijklcaa
+cfmnopcddddchqjrrcaa
+csfffscsssschqjrjcaa
+ctussvcsfwschqrrjcaa
+ccccxccsffsccyzzzzza
+aaacssssABssCDzEEEza
+acccsFFFffFFFGHIJKza
+acLMsFFNffFOFszEEEza
+acccsFFFffFFFszzzzza
+acPQsFOFffFFFscaaaaa
+acccsfffffffRscaaaaa
+aaacSsssssssTscaaaaa
+aaacUUUUUUUsTscaaaaa
+aaacVWVVVVUsTXcaaaaa
+aaaccccccccYZccaaaaa
+aaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaa
+"}

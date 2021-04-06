@@ -1,0 +1,6 @@
+/obj/closet/emcloset/New()
+	..()
+	new /obj/item/clothing/mask/breath(src)
+	new /obj/item/weapon/tank/air(src)
+	new /obj/item/clothing/head/helmet/space(src)
+	new /obj/item/clothing/suit/space(src)
