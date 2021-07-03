@@ -68,7 +68,7 @@ datum
 					var/datum/effects/system/harmless_smoke_spread/SM = new(usr.loc)
 					SM.attach(usr)
 					SM.set_up(10, 0, usr.loc)
-					playsound(usr.loc, 'smoke.ogg', 50, 1, -3)
+					playsound(usr.loc, 'sound/effects/smoke.ogg', 50, 1, -3)
 					spawn(0)
 						SM.start()
 					smokeCooldown = world.time + 30

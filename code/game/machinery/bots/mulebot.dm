@@ -122,7 +122,7 @@
 			locked = !locked
 			user << "\blue You [locked ? "lock" : "unlock"] the mulebot's controls!"
 			flick("mulebot-emagged", src)
-			playsound(src, 'sparks1.ogg', 100, 0)
+			playsound(src, 'sound/effects/sparks1.ogg', 100, 0)
 		else if(istype(I,/obj/item/weapon/cell) && open && !cell)
 			var/obj/item/weapon/cell/C = I
 			user.drop_item()
@@ -439,7 +439,7 @@
 	proc/load(var/atom/movable/C)
 		if((wires & wire_loadcheck) && !istype(C,/obj/crate))
 			src.visible_message("[src] makes a sighing buzz.", "You hear an electronic buzzing sound.")
-			playsound(src, 'buzz-sigh.ogg', 50, 0)
+			playsound(src, 'sound/machines/buzz-sigh.ogg', 50, 0)
 			return		// if not emagged, only allow crates to be loaded
 
 		if(get_dist(C, src) > 1 || load || !on)
@@ -608,25 +608,25 @@
 							mode = 4
 							if(blockcount == 3)
 								src.visible_message("[src] makes an annoyed buzzing sound", "You hear an electronic buzzing sound.")
-								playsound(src, 'buzz-two.ogg', 50, 0)
+								playsound(src, 'sound/machines/buzz-two.ogg', 50, 0)
 
 							if(blockcount > 5)	// attempt 5 times before recomputing
 								// find new path excluding blocked turf
 								src.visible_message("[src] makes a sighing buzz.", "You hear an electronic buzzing sound.")
-								playsound(src, 'buzz-sigh.ogg', 50, 0)
+								playsound(src, 'sound/machines/buzz-sigh.ogg', 50, 0)
 
 								spawn(2)
 									calc_path(next)
 									if(path.len > 0)
 										src.visible_message("[src] makes a delighted ping!", "You hear a ping.")
-										playsound(src, 'ping.ogg', 50, 0)
+										playsound(src, 'sound/machines/ping.ogg', 50, 0)
 									mode = 4
 								mode =6
 								return
 							return
 					else
 						src.visible_message("[src] makes an annoyed buzzing sound", "You hear an electronic buzzing sound.")
-						playsound(src, 'buzz-two.ogg', 50, 0)
+						playsound(src, 'sound/machines/buzz-two.ogg', 50, 0)
 						//world << "Bad turf."
 						mode = 5
 						return
@@ -646,11 +646,11 @@
 						blockcount = 0
 						mode = 4
 						src.visible_message("[src] makes a delighted ping!", "You hear a ping.")
-						playsound(src, 'ping.ogg', 50, 0)
+						playsound(src, 'sound/machines/ping.ogg', 50, 0)
 
 					else
 						src.visible_message("[src] makes a sighing buzz.", "You hear an electronic buzzing sound.")
-						playsound(src, 'buzz-sigh.ogg', 50, 0)
+						playsound(src, 'sound/machines/buzz-sigh.ogg', 50, 0)
 
 						mode = 7
 			//if(6)
@@ -696,7 +696,7 @@
 	proc/at_target()
 		if(!reached_target)
 			src.visible_message("[src] makes a chiming sound!", "You hear a chime.")
-			playsound(src, 'chime.ogg', 50, 0)
+			playsound(src, 'sound/machines/chime.ogg', 50, 0)
 			reached_target = 1
 
 			if(load)		// if loaded, unload at target
@@ -750,7 +750,7 @@
 	// when mulebot is in the same loc
 	proc/RunOver(var/mob/living/carbon/human/H)
 		src.visible_message("\red [src] drives over [H]!")
-		playsound(src, 'splat.ogg', 50, 1)
+		playsound(src, 'sound/effects/splat.ogg', 50, 1)
 
 		/*
 		if(ismob(load))

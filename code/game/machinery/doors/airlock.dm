@@ -99,7 +99,7 @@ Airlock index -> wire color are { 9, 4, 6, 7, 5, 8, 1, 2, 3 }.
 
 /obj/machinery/door/airlock/maintenance
 	name = "Maintenance Access"
-	icon = 'icons/obj/door/Doormaint.dmi'
+	icon = 'icons/obj/doors/Doormaint.dmi'
 	req_access = list(access_maint_tunnels)
 
 /obj/machinery/door/airlock/external
@@ -588,7 +588,7 @@ About the new airlock wires panel:
 	if (ishuman(user) && prob(40) && src.density)
 		var/mob/living/carbon/human/H = user
 		if(H.brainloss >= 60)
-			playsound(src, 'bang.ogg', 25, 1)
+			playsound(src, 'sound/bang.ogg', 25, 1)
 			if(!istype(H.head, /obj/item/clothing/head/helmet))
 				for(var/mob/M in viewers(src, null))
 					M << "\red [user] headbutts the airlock."
@@ -867,7 +867,7 @@ About the new airlock wires panel:
 	else if (istype(C, /obj/item/weapon/crowbar))
 		if ((src.density) && (!( src.welded ) && !( src.operating ) && ((!src.arePowerSystemsOn()) || (stat & NOPOWER)) && !( src.locked )))
 			spawn( 0 )
-				playsound(src, 'door.ogg', 100, 1, 6, 0)
+				playsound(src, 'sound/door.ogg', 100, 1, 6, 0)
 				src.operating = 1
 				animate2("opening")
 
@@ -903,7 +903,7 @@ About the new airlock wires panel:
 	if (src.welded || src.locked || (!src.arePowerSystemsOn()) || (stat & NOPOWER) || src.isWireCut(AIRLOCK_WIRE_OPEN_DOOR))
 		return 0
 	use_power(50)
-	playsound(src, 'airlock.ogg', 30, 1)
+	playsound(src, 'sound/machines/airlock.ogg', 30, 1)
 	if (src.closeOther != null && istype(src.closeOther, /obj/machinery/door/airlock/) && !src.closeOther.density)
 		src.closeOther.close()
 	return ..()
@@ -912,7 +912,7 @@ About the new airlock wires panel:
 	if (src.welded || src.locked || (!src.arePowerSystemsOn()) || (stat & NOPOWER) || src.isWireCut(AIRLOCK_WIRE_OPEN_DOOR))
 		return
 	use_power(50)
-	playsound(src, 'airlock.ogg', 30, 1)
+	playsound(src, 'sound/machines/airlock.ogg', 30, 1)
 	..()
 	return
 

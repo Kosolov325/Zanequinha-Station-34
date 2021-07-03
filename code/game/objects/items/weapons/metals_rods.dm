@@ -402,7 +402,7 @@ LATTICE
 
 		C:build(get_turf(src))
 		C:amount--
-		playsound(src, 'Genhit.ogg', 50, 1)
+		playsound(src, 'sound/weapons/Genhit.ogg', 50, 1)
 		C.add_fingerprint(user)
 
 		if (C:amount < 1)

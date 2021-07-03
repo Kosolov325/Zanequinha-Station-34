@@ -116,7 +116,7 @@
 			spawn(50)
 				traitor_mob << "The Syndicate have cunningly disguised a Syndicate Uplink as your [R.name] [loc]. Simply dial the frequency [format_frequency(freq)] to unlock its hidden features."
 				traitor_mob.mind.store_memory("<B>Radio Freq:</B> [format_frequency(freq)] ([R.name] [loc]).")
-				traitor_mob << 'tatoralert.ogg'
+				traitor_mob << 'sound/tatoralert.ogg'
 		else if (istype(R, /obj/item/device/pda))
 			var/obj/item/weapon/integrated_uplink/T = new /obj/item/weapon/integrated_uplink(R)
 			R:uplink = T
@@ -125,4 +125,4 @@
 			spawn(50)
 				traitor_mob << "The Syndicate have cunningly disguised a Syndicate Uplink as your [R.name] [loc]. Simply enter the code \"[pda_pass]\" into the ringtone select to unlock its hidden features."
 				traitor_mob.mind.store_memory("<B>Uplink Passcode:</B> [pda_pass] ([R.name] [loc]).")
-				traitor_mob << 'tatoralert.ogg'
+				traitor_mob << 'sound/tatoralert.ogg'

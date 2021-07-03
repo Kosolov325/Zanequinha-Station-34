@@ -135,7 +135,7 @@
 	new /obj/item/weapon/rcd(src)
 
 /obj/crate/proc/open()
-	playsound(src, 'click.ogg', 15, 1, -3)
+	playsound(src, 'sound/machines/click.ogg', 15, 1, -3)
 
 	for(var/obj/O in src)
 		O.loc = get_turf(src)
@@ -146,7 +146,7 @@
 	src.opened = 1
 
 /obj/crate/proc/close()
-	playsound(src, 'click.ogg', 15, 1, -3)
+	playsound(src, 'sound/machines/click.ogg', 15, 1, -3)
 	for(var/obj/O in get_turf(src))
 		if(O.density || O.anchored || O == src) continue
 		O.loc = src
@@ -181,7 +181,7 @@
 		overlays += emag
 		overlays += sparks
 		spawn(6) overlays -= sparks //Tried lots of stuff but nothing works right. so i have to use this *sadface*
-		playsound(src, 'sparks4.ogg', 75, 1)
+		playsound(src, 'sound/effects/sparks4.ogg', 75, 1)
 		src.locked = 0
 		src.broken = 1
 		user << "\blue You unlock the [src]."

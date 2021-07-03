@@ -43,7 +43,7 @@
 
 	src.icon_state = src.icon_opened
 	src.opened = 1
-	playsound(src, 'click.ogg', 15, 1, -3)
+	playsound(src, 'sound/machines/click.ogg', 15, 1, -3)
 	return 1
 
 /obj/closet/proc/close()
@@ -71,7 +71,7 @@
 		M.loc = src
 	src.icon_state = src.icon_closed
 	src.opened = 0
-	playsound(src, 'click.ogg', 15, 1, -3)
+	playsound(src, 'sound/machines/click.ogg', 15, 1, -3)
 	return 1
 
 /obj/closet/proc/toggle()

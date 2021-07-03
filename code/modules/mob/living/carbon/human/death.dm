@@ -7,7 +7,7 @@
 	src.dizziness = 0
 	src.jitteriness = 0
 	world << "<b><font color='#BF5FFF'>[name] died!"
-	world << 'dead.ogg'
+	world << 'sound/dead.ogg'
 	if (gibbed != 1)
 		emote("deathgasp") //let the world KNOW WE ARE DEAD
 

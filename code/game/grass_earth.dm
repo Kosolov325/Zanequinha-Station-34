@@ -22,7 +22,7 @@
 			..()
 			Get_Layer_Y(0.1)
 	deco1
-		icon = 'icons/turf/grasstiles.dmi'
+		icon = 'icons/misc/grasstiles.dmi'
 		icon_state = "2"
 		mouse_opacity = 0
 		layer = TURF_LAYER

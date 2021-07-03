@@ -273,7 +273,7 @@
 		return
 
 	if(status == LIGHT_OK || status == LIGHT_BURNED)
-		playsound(src, 'Glasshit.ogg', 75, 1)
+		playsound(src, 'sound/effects/Glasshit.ogg', 75, 1)
 	if(on)
 		var/datum/effects/system/spark_spread/s = new /datum/effects/system/spark_spread
 		s.set_up(3, 1, src)
@@ -462,7 +462,7 @@
 		user << "The [name] shatters!"
 		status = LIGHT_BROKEN
 		force = 5
-		playsound(src, 'Glasshit.ogg', 75, 1)
+		playsound(src, 'sound/effects/Glasshit.ogg', 75, 1)
 		update()
 
 

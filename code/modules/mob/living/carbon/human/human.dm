@@ -100,7 +100,7 @@
 							M << "\red <B>[src] accidentally bumps into [tmob] with the [W.name]."
 					tmob.weakened = max(4, tmob.weakened)
 					tmob.stunned = max(4, tmob.stunned)
-				playsound(src, 'Egloves.ogg', 50, 1, -1)
+				playsound(src, 'sound/weapons/Egloves.ogg', 50, 1, -1)
 				W:charges--
 				return
 		if(istype(tmob, /mob/living/carbon/human) && tmob.mutations & 32)
@@ -905,12 +905,12 @@
 		src.client.screen += src.contents
 
 	if (src.r_hand)
-		src.overlays += image("icon" = 'items_righthand.dmi', "icon_state" = src.r_hand.icon_state) //, "layer" = MOB_LAYER+1)
+		src.overlays += image("icon" = 'icons/mob/items_righthand.dmi', "icon_state" = src.r_hand.icon_state) //, "layer" = MOB_LAYER+1)
 
 		src.r_hand.screen_loc = ui_rhand
 
 	if (src.l_hand)
-		src.overlays += image("icon" = 'items_lefthand.dmi', "icon_state" = src.l_hand.icon_state) //, "layer" = MOB_LAYER+1)
+		src.overlays += image("icon" = 'icons/mob/items_lefthand.dmi', "icon_state" = src.l_hand.icon_state) //, "layer" = MOB_LAYER+1)
 
 		src.l_hand.screen_loc = ui_lhand
 
@@ -1177,7 +1177,7 @@
 			if (src.paralysis >= 3) src.paralysis -= 3
 			if (src.stunned >= 3) src.stunned -= 3
 			if (src.weakened >= 3) src.weakened -= 3
-			playsound(src, 'thudswoosh.ogg', 50, 1, -1)
+			playsound(src, 'sound/weapons/thudswoosh.ogg', 50, 1, -1)
 	else
 		if (M.a_intent == "grab")
 			if (M == src)
@@ -1194,7 +1194,7 @@
 			G.affecting = src
 			src.grabbed_by += G
 			G.synch()
-			playsound(src, 'thudswoosh.ogg', 50, 1, -1)
+			playsound(src, 'sound/weapons/thudswoosh.ogg', 50, 1, -1)
 			for(var/mob/O in viewers(src, null))
 				O.show_message(text("\red [] has grabbed [] passively!", M, src), 1)
 		else
@@ -1251,7 +1251,7 @@
 								if (prob(50))
 									if (src.weakened < 5)
 										src.weakened = 5
-									playsound(src, 'thudswoosh.ogg', 50, 1, -1)
+									playsound(src, 'sound/weapons/thudswoosh.ogg', 50, 1, -1)
 									for(var/mob/O in viewers(src, null))
 										O.show_message(text("\red <B>[] has knocked down []!</B>", M, src), 1, "\red You hear someone fall.", 2)
 								else
@@ -1291,7 +1291,7 @@
 					src.updatehealth()
 					sleep(20)
 				else
-					playsound(src, 'punchmiss.ogg', 25, 1, -1)
+					playsound(src, 'sound/weapons/punchmiss.ogg', 25, 1, -1)
 					for(var/mob/O in viewers(src, null))
 						O.show_message(text("\red <B>[] has attempted to punch []!</B>", M, src), 1)
 					return
@@ -1302,17 +1302,17 @@
 					var/randn = rand(1, 100)
 					if (randn <= 25)
 						src.weakened = 2
-						playsound(src, 'thudswoosh.ogg', 50, 1, -1)
+						playsound(src, 'sound/weapons/thudswoosh.ogg', 50, 1, -1)
 						for(var/mob/O in viewers(src, null))
 							O.show_message(text("\red <B>[] has pushed down []!</B>", M, src), 1)
 					else
 						if (randn <= 60)
 							src.drop_item()
-							playsound(src, 'thudswoosh.ogg', 50, 1, -1)
+							playsound(src, 'sound/weapons/thudswoosh.ogg', 50, 1, -1)
 							for(var/mob/O in viewers(src, null))
 								O.show_message(text("\red <B>[] has disarmed []!</B>", M, src), 1)
 						else
-							playsound(src, 'punchmiss.ogg', 25, 1, -1)
+							playsound(src, 'sound/weapons/punchmiss.ogg', 25, 1, -1)
 							for(var/mob/O in viewers(src, null))
 								O.show_message(text("\red <B>[] has attempted to disarm []!</B>", M, src), 1)
 	sleep(40)
@@ -1471,7 +1471,7 @@
 
 		body_standing += DI
 
-		DI.Blend(new /icon('dam_mask.dmi', "[O.icon_name]2"), ICON_MULTIPLY)
+		DI.Blend(new /icon('icons/mob/dam_mask.dmi', "[O.icon_name]2"), ICON_MULTIPLY)
 
 //		world << "[O.r_name]2 [O.d_i_state]-2 \icon[DI]"
 

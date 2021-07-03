@@ -99,7 +99,7 @@
 		else
 			del(src.occupant)
 		spawn(src.gibtime)
-			playsound(src, 'splat.ogg', 50, 1)
+			playsound(src, 'sound/effects/splat.ogg', 50, 1)
 			operating = 0
 			var/turf/Tx1 = locate(src.x - 1, src.y, src.z)
 			var/turf/Tx2 = locate(src.x - 2, src.y, src.z)

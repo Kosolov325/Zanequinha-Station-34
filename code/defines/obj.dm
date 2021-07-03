@@ -93,7 +93,7 @@
 /obj/grille
 	desc = "A piece of metal with evenly spaced gridlike holes in it. Blocks large object but lets small items, gas, or energy beams through."
 	name = "grille"
-	icon = 'icons/hs/structures.dmi'
+	icon = 'icons/hs/hs_structures.dmi'
 	icon_state = "grille"
 	plane = WINDOW_PLANE
 	var/health = 10.0
@@ -289,7 +289,7 @@
 /obj/lattice
 	desc = "A lightweight support lattice."
 	name = "lattice"
-	icon = 'icons/hs/structures.dmi'
+	icon = 'icons/hs/hs_structures.dmi'
 	icon_state = "lattice"
 	density = 0
 	anchored = 1.0
@@ -342,7 +342,7 @@
 
 /obj/manifest
 	name = "manifest"
-	icon = 'iocns/mob/screen1.dmi'
+	icon = 'icons/mob/screen1.dmi'
 	icon_state = "x"
 
 /obj/morgue
@@ -513,7 +513,7 @@
 
 /obj/displaycase
 	name = "Display Case"
-	icon = 'stationobjs.dmi'
+	icon = 'icons/obj/stationobjs.dmi'
 	icon_state = "glassbox1"
 	desc = "A display case for prized possessions."
 	density = 1

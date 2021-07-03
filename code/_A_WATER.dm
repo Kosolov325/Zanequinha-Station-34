@@ -144,7 +144,7 @@ obj
 						A.y_pos = 16
 						A.x_spd = (rand(-30,30)/10)
 						A.y_spd = (rand(-30,30)/10)
-					playsound(src, 'explosionfar.ogg', 100, 1, 30)
+					playsound(src, 'sound/effects/explosionfar.ogg', 100, 1, 30)
 					playsound(src, "explosion", 100, 1, 15)
 					del src
 					return

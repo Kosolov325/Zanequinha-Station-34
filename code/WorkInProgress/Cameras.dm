@@ -178,7 +178,7 @@
 	P.name = finished_title
 	P.desc = finished_detail
 
-	playsound(src, pick('polaroid1.ogg','polaroid2.ogg'), 75, 1, -3)
+	playsound(src, pick('sound/items/polaroid1.ogg','sound/items/polaroid2.ogg'), 75, 1, -3)
 
 	pictures_left--
 	src.desc = "A one use - polaroid camera. [pictures_left] photos left."

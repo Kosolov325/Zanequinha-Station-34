@@ -21,7 +21,7 @@ var/list/retard = list("Roberto_candi","Nopm")
 									for(var/mob/M in view(src))
 										if(M.client)
 											M << "\blue [src] honks!"
-											M << sound('bikehorn.ogg')
+											M << sound('sound/items/bikehorn.ogg')
 						if("Fuchsia")
 							gooze *= rand(1,world.time/10)
 			//else if(health <= 0)

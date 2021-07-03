@@ -153,7 +153,7 @@ proc/ReplaceWithEngineFloor(turf/simulated/floor/G)
 						M.pulling = null
 						step(M, M.dir)
 						M << "\blue You slipped on the wet floor!"
-						playsound(src, 'slip.ogg', 50, 1, -3)
+						playsound(src, 'sound/misc/slip.ogg', 50, 1, -3)
 						M.stunned = 8
 						M.weakened = 5
 					else
@@ -168,7 +168,7 @@ proc/ReplaceWithEngineFloor(turf/simulated/floor/G)
 					spawn(4) step(M, M.dir)
 					M.bruteloss += 5
 					M << "\blue You slipped on the floor!"
-					playsound(src, 'slip.ogg', 50, 1, -3)
+					playsound(src, 'sound/misc/slip.ogg', 50, 1, -3)
 					M.weakened = 10
 
 	..()
@@ -218,7 +218,7 @@ proc/ReplaceTurfWithRWall(turf/G)
 /turf/simulated/wall/proc/dismantle_wall(devastated=0)
 	if(istype(src,/turf/simulated/wall/r_wall))
 		if(!devastated)
-			playsound(src, 'Welder.ogg', 100, 1)
+			playsound(src, 'sound/items/Welder.ogg', 100, 1)
 			new /obj/structure/girder/reinforced(src)
 			new /obj/item/weapon/sheet/r_metal( src )
 		else
@@ -227,7 +227,7 @@ proc/ReplaceTurfWithRWall(turf/G)
 			new /obj/item/weapon/sheet/r_metal( src )
 	else
 		if(!devastated)
-			playsound(src, 'Welder.ogg', 100, 1)
+			playsound(src, 'sound/items/Welder.ogg', 100, 1)
 			new /obj/structure/girder(src)
 			new /obj/item/weapon/sheet/metal( src )
 			new /obj/item/weapon/sheet/metal( src )
@@ -289,7 +289,7 @@ proc/ReplaceTurfWithRWall(turf/G)
 			return
 
 	user << "\blue You push the wall but nothing happens!"
-	playsound(src, 'Genhit.ogg', 25, 1)
+	playsound(src, 'sound/weapons/Genhit.ogg', 25, 1)
 	src.add_fingerprint(user)
 	return
 
@@ -311,7 +311,7 @@ proc/ReplaceTurfWithRWall(turf/G)
 		W:use_fuel(5)
 
 		user << "\blue Now disassembling the outer wall plating."
-		playsound(src, 'Welder.ogg', 100, 1)
+		playsound(src, 'sound/items/Welder.ogg', 100, 1)
 
 		sleep(100)
 
@@ -337,7 +337,7 @@ proc/ReplaceTurfWithRWall(turf/G)
 
 		if (src.d_state == 2)
 			user << "\blue Slicing metal cover."
-			playsound(src, 'Welder.ogg', 100, 1)
+			playsound(src, 'sound/items/Welder.ogg', 100, 1)
 			sleep(60)
 			if ((user.loc == T && user.equipped() == W))
 				src.d_state = 3
@@ -345,7 +345,7 @@ proc/ReplaceTurfWithRWall(turf/G)
 
 		else if (src.d_state == 5)
 			user << "\blue Removing support rods."
-			playsound(src, 'Welder.ogg', 100, 1)
+			playsound(src, 'sound/items/Welder.ogg', 100, 1)
 			sleep(100)
 			if ((user.loc == T && user.equipped() == W))
 				src.d_state = 6
@@ -356,7 +356,7 @@ proc/ReplaceTurfWithRWall(turf/G)
 		if (src.d_state == 4)
 			var/turf/T = user.loc
 			user << "\blue Detaching support rods."
-			playsound(src, 'Ratchet.ogg', 100, 1)
+			playsound(src, 'sound/items/Ratchet.ogg', 100, 1)
 			sleep(40)
 			if ((user.loc == T && user.equipped() == W))
 				src.d_state = 5
@@ -364,14 +364,14 @@ proc/ReplaceTurfWithRWall(turf/G)
 
 	else if (istype(W, /obj/item/weapon/wirecutters))
 		if (src.d_state == 0)
-			playsound(src, 'Wirecutter.ogg', 100, 1)
+			playsound(src, 'sound/items/Wirecutter.ogg', 100, 1)
 			src.d_state = 1
 			new /obj/item/weapon/rods( src )
 
 	else if (istype(W, /obj/item/weapon/screwdriver))
 		if (src.d_state == 1)
 			var/turf/T = user.loc
-			playsound(src, 'Screwdriver.ogg', 100, 1)
+			playsound(src, 'sound/items/Screwdriver.ogg', 100, 1)
 			user << "\blue Removing support lines."
 			sleep(40)
 			if ((user.loc == T && user.equipped() == W))
@@ -383,7 +383,7 @@ proc/ReplaceTurfWithRWall(turf/G)
 		if (src.d_state == 3)
 			var/turf/T = user.loc
 			user << "\blue Prying cover off."
-			playsound(src, 'Crowbar.ogg', 100, 1)
+			playsound(src, 'sound/items/Crowbar.ogg', 100, 1)
 			sleep(100)
 			if ((user.loc == T && user.equipped() == W))
 				src.d_state = 4
@@ -392,7 +392,7 @@ proc/ReplaceTurfWithRWall(turf/G)
 		else if (src.d_state == 6)
 			var/turf/T = user.loc
 			user << "\blue Prying outer sheath off."
-			playsound(src, 'Crowbar.ogg', 100, 1)
+			playsound(src, 'sound/items/Crowbar.ogg', 100, 1)
 			sleep(100)
 			if ((user.loc == T && user.equipped() == W))
 				user << "\blue You removed the outer sheath."
@@ -492,7 +492,7 @@ turf/simulated/floor/proc/update_icon()
 		return
 	if(istype(C, /obj/item/weapon/wrench))
 		user << "\blue Removing rods..."
-		playsound(src, 'Ratchet.ogg', 80, 1)
+		playsound(src, 'sound/items/Ratchet.ogg', 80, 1)
 		if(do_after(user, 30))
 			new /obj/item/weapon/rods(src)
 			new /obj/item/weapon/rods(src)
@@ -540,7 +540,7 @@ proc/turf_to_plating(turf/E)
 				src:has_cover = 0
 				update_icon()
 				user << "\red You tear the cover off, and break it. You can now place floor tiles on this plating." //todo make this drop a thing or something.
-				playsound(src, 'Crowbar.ogg', 80, 1)
+				playsound(src, 'sound/items/Crowbar.ogg', 80, 1)
 		else
 			if(intact)
 				if(broken || burnt)
@@ -548,7 +548,7 @@ proc/turf_to_plating(turf/E)
 				else
 					new /obj/item/weapon/tile(src)
 
-				playsound(src, 'Crowbar.ogg', 80, 1)
+				playsound(src, 'sound/items/Crowbar.ogg', 80, 1)
 
 				turf_to_plating(src)
 
@@ -560,7 +560,7 @@ proc/turf_to_plating(turf/E)
 				user << "\blue Reinforcing the floor..."
 				C:amount -= 2
 				if (C:amount <= 0) del(C) //wtf
-				playsound(src, 'Deconstruct.ogg', 80, 1)
+				playsound(src, 'sound/items/Deconstruct.ogg', 80, 1)
 				ReplaceWithEngineFloor(src)
 			else
 				user << "\red You need more rods."
@@ -575,7 +575,7 @@ proc/turf_to_plating(turf/E)
 			else
 				var/obj/item/weapon/tile/T = C
 				if(T.amount > 0)
-					playsound(src, 'Genhit.ogg', 50, 1)
+					playsound(src, 'sound/weapons/Genhit.ogg', 50, 1)
 					if(--T.amount <= 0)
 						del(T)
 					ReplaceWithFloor(src)
@@ -635,7 +635,7 @@ proc/turf_to_plating(turf/E)
 
 	if (istype(C, /obj/item/weapon/rods))
 		user << "\blue Constructing support lattice ..."
-		playsound(src, 'Genhit.ogg', 50, 1)
+		playsound(src, 'sound/weapons/Genhit.ogg', 50, 1)
 		ReplaceTurfWithLattice(src)
 		C:amount--
 
@@ -649,7 +649,7 @@ proc/turf_to_plating(turf/E)
 		if(locate(/obj/lattice, src))
 			var/obj/lattice/L = locate(/obj/lattice, src)
 			del(L)
-			playsound(src, 'Genhit.ogg', 50, 1)
+			playsound(src, 'sound/weapons/Genhit.ogg', 50, 1)
 			C:build(src)
 			C:amount--
 

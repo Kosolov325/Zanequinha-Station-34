@@ -7,19 +7,19 @@
 		icon_state = "snad"
 
 /turf/unsimulated/grass
-	icon = 'icons/turf/grasstiles.dmi'
+	icon = 'icons/misc/grasstiles.dmi'
 	name = "grass"
 	icon_state = "1"
 	TurfCeiling = 0
 
 /turf/simulated/grass
-	icon = 'icons/turf/grasstiles.dmi'
+	icon = 'icons/misc/grasstiles.dmi'
 	name = "grass"
 	icon_state = "1"
 	TurfCeiling = 0
 
 /turf/unsimulated/dirt
-	icon = 'icons/turf/grasstiles.dmi'
+	icon = 'icons/misc/grasstiles.dmi'
 	name = "dirt"
 	icon_state = "dirt"
 

@@ -69,7 +69,7 @@ var/kick_inactive_players = 0 //do_kick on mode handles.
 		return 0
 
 	world << "<FONT color='blue'><B><font size=4>Welcome to [Station_Name]!"
-	world << 'welcome.ogg'
+	world << 'sound/welcome.ogg'
 
 	//Create player characters and transfer them
 	create_characters()
@@ -141,7 +141,7 @@ var/kick_inactive_players = 0 //do_kick on mode handles.
 			spawn(50)
 				mode.ending()
 				//'titlesong.ogg'
-				world << sound('karako.ogg',channel=LOBBY_CHANNEL,volume=100, repeat = 1)
+				world << sound('music/karako.ogg',channel=LOBBY_CHANNEL,volume=100, repeat = 1)
 				world << "\blue <B>Restarting in 10 seconds</B>"
 
 				sleep(100)

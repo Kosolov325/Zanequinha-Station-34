@@ -31,7 +31,7 @@
 	attackby(obj/item/weapon/W as obj, mob/user as mob)
 		if(istype(W,/obj/item/assembly/time_ignite) && !stage)
 			user << "\blue You add [W] to the metal casing."
-			playsound(src, 'Screwdriver2.ogg', 25, -3)
+			playsound(src, 'sound/items/Screwdriver2.ogg', 25, -3)
 			del(W) //Okay so we're not really adding anything here. cheating.
 			icon_state = "chemg2"
 			name = "unsecured grenade"
@@ -39,7 +39,7 @@
 		else if(istype(W,/obj/item/weapon/screwdriver) && stage == 1)
 			if(beakers.len)
 				user << "\blue You lock the assembly."
-				playsound(src, 'Screwdriver.ogg', 25, -3)
+				playsound(src, 'sound/items/Screwdriver.ogg', 25, -3)
 				name = "grenade"
 				icon_state = "chemg3"
 				stage = 2
@@ -68,7 +68,7 @@
 				explode()
 			user.dir = get_dir(user, target)
 			user.drop_item()
-			playsound(locate(x,y,z), 'armbomb.ogg', 75, 1, -3)
+			playsound(locate(x,y,z), 'sound/weapons/armbomb.ogg', 75, 1, -3)
 			dir = user.dir
 			spd = 25
 			ang = 0
@@ -91,11 +91,11 @@
 				if(G.reagents.total_volume) has_reagents = 1
 
 			if(!has_reagents)
-				playsound(src, 'Screwdriver2.ogg', 50, 1)
+				playsound(src, 'sound/items/Screwdriver2.ogg', 50, 1)
 				state = 0
 				return
 
-			playsound(src, 'bamf.ogg', 50, 1)
+			playsound(src, 'sound/effects/bamf.ogg', 50, 1)
 
 			for(var/obj/item/weapon/reagent_containers/glass/G in beakers)
 				G.reagents.trans_to(src, G.reagents.total_volume)
@@ -562,7 +562,7 @@
 				M.nutrition += src.heal_amt * 10
 				//M.poo += 0.1
 				src.heal(M)
-				playsound(M.loc,'eatfood.ogg', rand(10,50), 1)
+				playsound(M.loc,'sound/items/eatfood.ogg', rand(10,50), 1)
 				if(!src.amount)
 					user << "\red You finish eating [src]."
 					del(src)
@@ -582,7 +582,7 @@
 				M.nutrition += src.heal_amt * 10
 				//M.poo += 0.1
 				src.heal(M)
-				playsound(M.loc, 'eatfood.ogg', rand(10,50), 1)
+				playsound(M.loc, 'sound/items/eatfood.ogg', rand(10,50), 1)
 				if(!src.amount)
 					user << "\red [M] finishes eating [src]."
 					del(src)
@@ -643,7 +643,7 @@
 				spawn(5)
 					reagents.trans_to(M, gulp_size)
 			M.thirst += gulp_size*2
-			playsound(M.loc,'drink.ogg', rand(10,50), 1)
+			playsound(M.loc,'sound/items/drink.ogg', rand(10,50), 1)
 
 			return 1
 

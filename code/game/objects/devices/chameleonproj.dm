@@ -46,14 +46,14 @@
 
 	afterattack(atom/target, mob/user , flag)
 		if(istype(target,/obj/item))
-			playsound(src, 'flash.ogg', 100, 1, 1)
+			playsound(src, 'sound/weapons/flash.ogg', 100, 1, 1)
 			user << "\blue Scanned [target]."
 			saved_item = target.type
 
 	proc/toggle()
 		if(!can_use || !saved_item) return
 		if(active_dummy)
-			playsound(src, 'pop.ogg', 100, 1, 1)
+			playsound(src, 'sound/effects/pop.ogg', 100, 1, 1)
 			for(var/atom/movable/A in active_dummy)
 				A.loc = get_turf(active_dummy)
 				if(ismob(A))
@@ -67,7 +67,7 @@
 			flick("emppulse",T)
 			spawn(8) del(T)
 		else
-			playsound(src, 'pop.ogg', 100, 1, 1)
+			playsound(src, 'sound/effects/pop.ogg', 100, 1, 1)
 			var/obj/O = new saved_item (src)
 			if(!O) return
 			var/obj/dummy/chameleon/C = new/obj/dummy/chameleon(get_turf(src))

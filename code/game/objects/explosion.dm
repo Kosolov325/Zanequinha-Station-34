@@ -26,7 +26,7 @@ proc/explosion(atom/epicenter, devastation_range, heavy_impact_range, light_impa
 			A.x_spd = (rand(-30,30)/2)
 			A.y_spd = (rand(-30,30)/2)
 
-		playsound(epicenter, 'explosionfar.ogg', 100, 1, round(devastation_range*2,1) )
+		playsound(epicenter, 'sound/effects/explosionfar.ogg', 100, 1, round(devastation_range*2,1) )
 		playsound(epicenter, "explosion", 100, 1, round(devastation_range,1) )
 
 		if(heavy_impact_range > 1)

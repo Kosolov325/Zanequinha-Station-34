@@ -71,7 +71,7 @@ mob
 								dir = 2 //Makes it so you face south. I don't plan to add support for 4-dir animations.
 
 								view() << "<b>[name]</b> farts."
-								playsound(src, 'fart.ogg', 100, 0, 4, 0) //hilarity %100
+								playsound(src, 'sound/fart.ogg', 100, 0, 4, 0) //hilarity %100
 
 								danc = new(locate(x,y,z),src)
 								ANIMATION_RUNNING = 1 //This part initializes the animation.
@@ -147,7 +147,7 @@ mob
 									animate(danc.Limb3,transform = LeftArm, time = 1)
 									animate(danc.Limb4,transform = RightArm, time = 1) //This is what causes the magic.
 									sleep(1)
-									view() << 'clap.ogg'
+									view() << 'sound/clap.ogg'
 									animate(danc.Limb3,transform = Reset, time = 1)
 									animate(danc.Limb4,transform = Reset, time = 1)
 									sleep(1)
@@ -164,7 +164,7 @@ mob
 							if(!ANIMATION_RUNNING)
 								dir = 2 //Makes it so you face south. I don't plan to add support for 4-dir animations.
 
-								playsound(src, 'disco fever.ogg', 100, 0, 7, 0)
+								playsound(src, 'sound/disco fever.ogg', 100, 0, 7, 0)
 
 								danc = new(locate(x,y,z),src)
 								ANIMATION_RUNNING = 1 //This part initializes the animation.
@@ -235,7 +235,7 @@ mob
 							if(!ANIMATION_RUNNING)
 								dir = 2 //Makes it so you face south. I don't plan to add support for 4-dir animations.
 
-								playsound(src, 'hate niggers.ogg', 100, 0, 7, 0)
+								playsound(src, 'sound/hate niggers.ogg', 100, 0, 7, 0)
 
 								danc = new(locate(x,y,z),src)
 								ANIMATION_RUNNING = 1 //This part initializes the animation.

@@ -5,7 +5,7 @@
 	voice_name = "baldi"
 	desc = "from the edutainment game............"
 	voice_message = "says"
-	icon = 'cube.dmi'
+	icon = 'icons/mob/cube.dmi'
 	icon_state = "baldi"
 	heightSize = 30
 	var/l_delay = 0
@@ -21,9 +21,9 @@
 						g = e
 					if(g)
 						walk_to(src,g,1,1,0)
-						playsound(loc,'slap.ogg',100,1,-10)
-						playsound(loc,'slap.ogg',100,1,-10)
-						playsound(loc,'slap.ogg',100,1,-10)
+						playsound(loc,'sound/slap.ogg',100,1,-10)
+						playsound(loc,'sound/slap.ogg',100,1,-10)
+						playsound(loc,'sound/slap.ogg',100,1,-10)
 						icon_state = "slap"
 						sleep(5)
 						walk(src,0)

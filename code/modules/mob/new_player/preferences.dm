@@ -66,7 +66,7 @@ datum/preferences
 			if("alternian")
 				return 'icons/mob/human.dmi'
 			if("shark")
-				return 'shark.dmi'
+				return 'icons/mob/shark.dmi'
 
 	proc/randomize_name()
 		if (gender == MALE)

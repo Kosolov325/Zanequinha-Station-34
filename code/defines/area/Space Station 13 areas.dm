@@ -21,7 +21,7 @@
 	var/party = null
 	level = null
 	name = "Space"
-	icon = 'areas.dmi'
+	icon = 'icons/turf/areas.dmi'
 	icon_state = "unknown"
 	layer = 10
 	mouse_opacity = 0
@@ -62,11 +62,11 @@
 /area/alternianShip
 	name = "Alternian Ship"
 	icon_state = "alternianship"
-	song = 'titlesong.ogg'
+	song = 'sound/titlesong.ogg'
 	requires_power = 0
 
 	church
-		song = 'churchel.ogg'
+		song = 'music/churchel.ogg'
 
 /area/engine/
 

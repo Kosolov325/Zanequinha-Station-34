@@ -1,12 +1,12 @@
 /image/slime_face
-	icon = 'blobbies.dmi'
+	icon = 'icons/mob/blobbies.dmi'
 	icon_state = "aslime-:)"
 	appearance_flags = RESET_COLOR
 
 /mob/living/carbon/blobby
 	name = "blobby"
 	voice_name = "blobby"
-	icon = 'blobbies.dmi'
+	icon = 'icons/mob/blobbies.dmi'
 	desc = "Ranchero De Slimes!"
 	icon_state = "grey baby slime"
 	pixel_y = -4
@@ -23,7 +23,7 @@
 			MyShadow.pixel_y = pixel_y
 		if(onFloor && world.time > j_delay)
 			ySpeed = rand(600,800)/256
-			playsound(src, pick('bounce1.wav','bounce2.wav','bounce3.wav','bounce4.wav'), 100, 0, 4, (rand()-0.5)/10)
+			playsound(src, pick('sound/effects/bounce1.wav','sound/effects/bounce2.wav','sound/effects/bounce3.wav','sound/effects/bounce4.wav'), 100, 0, 4, (rand()-0.5)/10)
 			j_delay = world.time+rand(2,6)
 		if(world.time > l_delay)
 			if(!client)

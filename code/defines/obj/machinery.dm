@@ -125,7 +125,7 @@
 
 /obj/machinery/igniter
 	name = "igniter"
-	icon = 'stationobjs.dmi'
+	icon = 'icons/obj/stationobjs.dmi'
 	icon_state = "igniter1"
 	var/id = null
 	var/on = 1.0
@@ -133,7 +133,7 @@
 
 /obj/machinery/injector
 	name = "injector"
-	icon = 'stationobjs.dmi'
+	icon = 'icons/obj/stationobjs.dmi'
 	icon_state = "injector"
 	density = 1
 	anchored = 1.0
@@ -141,7 +141,7 @@
 
 /obj/machinery/mass_driver
 	name = "mass driver"
-	icon = 'stationobjs.dmi'
+	icon = 'icons/obj/stationobjs.dmi'
 	icon_state = "mass_driver"
 	var/power = 1.0
 	var/code = 1.0
@@ -151,7 +151,7 @@
 
 /obj/machinery/meter
 	name = "meter"
-	icon = 'meter.dmi'
+	icon = 'icons/obj/meter.dmi'
 	icon_state = "meterX"
 	var/obj/machinery/atmospherics/pipe/target = null
 	anchored = 1.0
@@ -161,7 +161,7 @@
 /obj/machinery/nuclearbomb
 	desc = "Uh oh."
 	name = "Nuclear Fission Explosive"
-	icon = 'stationobjs.dmi'
+	icon = 'icons/obj/stationobjs.dmi'
 	icon_state = "nuclearbombc"
 	density = 1
 	anchored = 1.0
@@ -193,7 +193,7 @@
 
 /obj/machinery/restruct
 	name = "DNA Physical Restructurization Accelerator"
-	icon = 'Cryogenic2.dmi'
+	icon = 'icons/obj/Cryogenic2.dmi'
 	icon_state = "restruct_0"
 	density = 1
 	var/locked = 0.0
@@ -254,7 +254,7 @@
 
 /obj/machinery/sec_lock
 	name = "Security Pad"
-	icon = 'stationobjs.dmi'
+	icon = 'icons/obj/stationobjs.dmi'
 	icon_state = "sec_lock"
 	var/obj/item/weapon/card/id/scan = null
 	var/a_type = 0.0
@@ -265,7 +265,7 @@
 
 /obj/machinery/door_control
 	name = "Remote Door Control"
-	icon = 'stationobjs.dmi'
+	icon = 'icons/obj/stationobjs.dmi'
 	icon_state = "doorctrl0"
 	desc = "A remote control switch for a door."
 	var/id = null
@@ -291,7 +291,7 @@
 
 /obj/machinery/shuttle
 	name = "shuttle"
-	icon = 'shuttle.dmi'
+	icon = 'icons/turf/shuttle.dmi'
 
 /obj/machinery/shuttle/engine
 	name = "engine"
@@ -340,7 +340,7 @@
 	icon_state = "router"
 
 /obj/debuggerteleport
-	icon = 'stationobjs.dmi'
+	icon = 'icons/obj/stationobjs.dmi'
 	density = 1
 	anchored = 1.0
 	name = "hub"
@@ -352,7 +352,7 @@
 			M.heightZ = 90
 
 /obj/debuggerteleportBACC
-	icon = 'stationobjs.dmi'
+	icon = 'icons/obj/stationobjs.dmi'
 	density = 1
 	anchored = 1.0
 	name = "hub"
@@ -363,7 +363,7 @@
 
 /obj/machinery/teleport
 	name = "teleport"
-	icon = 'stationobjs.dmi'
+	icon = 'icons/obj/stationobjs.dmi'
 	density = 1
 	anchored = 1.0
 
@@ -379,7 +379,7 @@
 
 /obj/machinery/wire
 	name = "wire"
-	icon = 'power_cond.dmi'
+	icon = 'icons/obj/power_cond.dmi'
 
 
 /obj/machinery/power
@@ -536,7 +536,7 @@
 	name = "Vendomat"
 	plane = 0
 	desc = "A generic vending machine."
-	icon = 'vending.dmi'
+	icon = 'icons/obj/vending.dmi'
 	icon_state = "generic"
 	anchored = 1
 	density = 1

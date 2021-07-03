@@ -11,7 +11,7 @@ var/list/highblood_whitelist = list("Zanexsas","Jogn_iceberg","Newbjloko","Harmo
 
 
 var titleSongs[] = list(	//Pra colocar uma musica no lobby e so colocar o numero e a musica
-    'chahut.ogg',
-    'karako.ogg',
-    'marvus.ogg',
+    'music/chahut.ogg',
+    'music/karako.ogg',
+    'music/marvus.ogg',
 )

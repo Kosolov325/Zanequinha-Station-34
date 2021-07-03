@@ -152,7 +152,7 @@
 
 /obj/machinery/computer/communications/attackby(I as obj, user as mob)
 	if(istype(I, /obj/item/weapon/screwdriver))
-		playsound(src, 'Screwdriver.ogg', 50, 1)
+		playsound(src, 'sound/items/Screwdriver.ogg', 50, 1)
 		if(do_after(user, 20))
 			if (src.stat & BROKEN)
 				user << "\blue The broken glass falls out."
@@ -384,7 +384,7 @@
 
 
 	emergency_shuttle.incall()
-	world << 'shuttlecalled.ogg'
+	world << 'sound/shuttlecalled.ogg'
 	world << "\blue <B>Alert: The emergency shuttle has been called. It will arrive in [round(emergency_shuttle.timeleft()/60)] minutes.</B>"
 
 	return

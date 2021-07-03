@@ -22,7 +22,7 @@
 
 /obj/machinery/door/firedoor/border_only
 	name = "Firelock"
-	icon = 'icons/obj/door/door_fire2.dmi'
+	icon = 'icons/obj/doors/door_fire2.dmi'
 	icon_state = "door0"
 
 /obj/machinery/door/poddoor

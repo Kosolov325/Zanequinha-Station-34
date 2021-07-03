@@ -1320,7 +1320,7 @@
 				else
 					boom.icon_state = "start"
 		sleep(40)
-		M << sound('explosionfar.ogg')
+		M << sound('sound/effects/explosionfar.ogg')
 		boom.icon_state = "end"
 		flick("explode", boom)
 		sleep(40)

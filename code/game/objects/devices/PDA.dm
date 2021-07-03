@@ -1053,7 +1053,7 @@ Code:
 						A.show_message("<i>Intercepted message from <b>[P:owner]</b>: [t]</i>")
 
 				if (!P.silent)
-					playsound(P.loc, 'twobeep.ogg', 50, 1)
+					playsound(P.loc, 'sound/machines/twobeep.ogg', 50, 1)
 					for (var/mob/O in hearers(3, P.loc))
 						O.show_message(text("\icon[P] *[P.ttone]*"))
 
@@ -1226,7 +1226,7 @@ Code:
 		else if (href_list["honk"])
 			if (last_honk && world.time < last_honk + 20)
 				return
-			playsound(src, 'bikehorn.ogg', 50, 1)
+			playsound(src, 'sound/items/bikehorn.ogg', 50, 1)
 			src.last_honk = world.time
 
 		//Toxins PDA signaler stuff
@@ -1271,7 +1271,7 @@ Code:
 
 		if ((src.honkamt > 0) && (prob(60)))
 			src.honkamt--
-			playsound(src, 'bikehorn.ogg', 30, 1)
+			playsound(src, 'sound/items/bikehorn.ogg', 30, 1)
 
 		for (var/mob/M in viewers(1, src.loc))
 			if (M.client && M.machine == src)
@@ -1399,7 +1399,7 @@ Code:
 
 		M.pulling = null
 		M << "\blue You slipped on the PDA!"
-		playsound(src, 'slip.ogg', 50, 1, -3)
+		playsound(src, 'sound/misc/slip.ogg', 50, 1, -3)
 		M.stunned = 8
 		M.weakened = 5
 
@@ -1456,7 +1456,7 @@ Code:
 	selected:tnote += "<i><b>&larr; From (AI) [usr.name]:</b></i><br>[t]<br>"
 
 	if (!selected:silent)
-		playsound(selected.loc, 'twobeep.ogg', 50, 1)
+		playsound(selected.loc, 'sound/machines/twobeep.ogg', 50, 1)
 		for (var/mob/O in hearers(3, selected.loc))
 			O.show_message(text("\icon[selected] *[selected:ttone]*"))
 

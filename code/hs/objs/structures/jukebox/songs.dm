@@ -2,7 +2,7 @@ datum
 	song
 		var
 			name = "Thit"
-			file = 'karako.ogg'
+			file = "music/karako.ogg"
 			volume = 100
 			playing = FALSE
 

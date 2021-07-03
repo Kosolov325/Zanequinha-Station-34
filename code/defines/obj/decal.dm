@@ -7,7 +7,7 @@
 
 /obj/decal/point
 	name = "point"
-	icon = 'screen1.dmi'
+	icon = 'icons/mob/screen1.dmi'
 	icon_state = "arrow"
 	layer = 16.0
 	anchored = 1
@@ -21,7 +21,7 @@
 	density = 0
 	anchored = 1
 	layer = 2
-	icon = 'blood.dmi'
+	icon = 'icons/effects/blood.dmi'
 	icon_state = "floor1"
 	random_icon_states = list("floor1", "floor2", "floor3", "floor4", "floor5", "floor6", "floor7")
 	var/datum/disease/virus = null
@@ -29,7 +29,7 @@
 	blood_type = null
 
 	colored
-		icon = 'grayscale_blood.dmi'
+		icon = 'icons/hs/grayscale_blood.dmi'
 		random_icon_states = list("floor1", "floor2", "floor3", "floor4", "floor5", "floor6", "floor7","gib1", "gib2", "gib3", "gib4", "gib5", "gib6", "gib7","gibbl1", "gibbl2", "gibbl3", "gibbl4", "gibbl5")
 		New()
 			..()
@@ -48,7 +48,7 @@
 	density = 0
 	anchored = 0
 	layer = 2
-	icon = 'blood.dmi'
+	icon = 'icons/effects/blood.dmi'
 	icon_state = "gibbl5"
 	random_icon_states = list("gib1", "gib2", "gib3", "gib4", "gib5", "gib6")
 
@@ -67,7 +67,7 @@
 	density = 0
 	anchored = 0
 	layer = 2
-	icon = 'robots.dmi'
+	icon = 'icons/mob/robots.dmi'
 	icon_state = "gib1"
 	random_icon_states = list("gib1", "gib2", "gib3", "gib4", "gib5", "gib6", "gib7")
 
@@ -80,7 +80,7 @@
 	density = 0
 	anchored = 1
 	layer = 2
-	icon = 'oil.dmi'
+	icon = 'icons/effects/oil.dmi'
 	icon_state = "floor1"
 	var/datum/disease/virus = null
 	random_icon_states = list("floor1", "floor2", "floor3", "floor4", "floor5", "floor6", "floor7")

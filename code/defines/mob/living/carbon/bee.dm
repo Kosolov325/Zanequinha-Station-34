@@ -3,7 +3,7 @@
 	desc = "These look really big. Are they even bees?"
 	voice_name = "bee"
 	voice_message = "buzzes"
-	icon = 'bee.dmi'
+	icon = 'icons/mob/bee.dmi'
 	icon_state = "petbee-wings"
 	heightSize = 14
 	var/l_delay = 0

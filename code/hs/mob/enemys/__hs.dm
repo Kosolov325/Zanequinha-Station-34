@@ -1,2 +1,2 @@
 /mob/enemy/hs
-	icon = 'icons/hs/hs_critters.dmi'
+	icon = 'icons/hs/mobs/hs_critters.dmi'

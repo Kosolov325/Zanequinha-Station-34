@@ -80,12 +80,12 @@
 			spawn( src.det_time )
 				prime()
 				return
-		playsound(user, 'armbomb.ogg', 75, 1, -3)
+		playsound(user, 'sound/weapons/armbomb.ogg', 75, 1, -3)
 		src.add_fingerprint(user)
 	return
 
 /obj/item/weapon/grenade/explosiongrenade/proc/prime()
-	playsound(src, 'nice.ogg', 75, 1, -2)
+	playsound(src, 'sound/nice.ogg', 75, 1, -2)
 	explosion(locate(x,y,z),2,4,6,4)
 	del src
 

@@ -29,7 +29,7 @@ datum
 						if(M.client)
 							if(M != usr)
 								M << "\red [usr.name] dashs furiously towards [target.name]!"
-							M << sound('bikehorn.ogg')
+							M << sound('sound/items/bikehorn.ogg')
 					while(get_dist(target,usr) < nearest_dist && get_dist(target,usr) > 1 && !usr.stat)
 						usr.density = 0
 						spawn(1) usr.Dash_Effect(usr.loc)
@@ -47,7 +47,7 @@ datum
 						var/datum/effects/system/harmless_smoke_spread/SM = new(target.loc)
 						SM.attach(target)
 						SM.set_up(10, 0, target.loc)
-						playsound(target.loc, 'smoke.ogg', 50, 1, -3)
+						playsound(target.loc, 'sound/effects/smoke.ogg', 50, 1, -3)
 						spawn(0)
 							SM.start()
 						if(prob(80))

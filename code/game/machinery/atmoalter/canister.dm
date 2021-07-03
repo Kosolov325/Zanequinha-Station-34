@@ -1,6 +1,6 @@
 /obj/machinery/portable_atmospherics/canister
 	name = "canister"
-	icon = 'atmos.dmi'
+	icon = 'icons/obj/atmos.dmi'
 	density = 1
 	var/health = 100.0
 	flags = FPRINT | CONDUCT
@@ -75,7 +75,7 @@
 		location.assume_air(air_contents)
 
 		src.destroyed = 1
-		playsound(src, 'spray.ogg', 10, 1, -3)
+		playsound(src, 'sound/effects/spray.ogg', 10, 1, -3)
 		src.density = 0
 		update_icon()
 

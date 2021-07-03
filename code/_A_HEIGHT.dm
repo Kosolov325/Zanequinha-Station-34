@@ -51,7 +51,7 @@ obj
 
 turf
 	var/TurfGravity = 96/256 //Obvious variable names
-	var/TurfStepSound = list('footstep1.ogg','footstep2.ogg','footstep3.ogg','footstep4.ogg')
+	var/TurfStepSound = list('sound/footstep1.ogg','sound/footstep2.ogg','sound/footstep3.ogg','sound/footstep4.ogg')
 	var/TurfHeight = 0
 	var/TurfCeiling = 256
 	mouse_opacity = 2 //Fixes RCD shit
@@ -133,7 +133,7 @@ mob
 		if(canmove == 1 && lying == 0 && !src.restrained() && !ANIMATION_RUNNING && istype(T,/turf)) //If on floor/space and not restrained...
 			if(onFloor == 1)
 				ySpeed = (1320/256)/(1+(heightZ<round(T.water_height)))
-				playsound(src, 'jump.ogg', 100, 0, 12, 0)
+				playsound(src, 'sound/jump.ogg', 100, 0, 12, 0)
 			else
 				flyPack()
 	proc/flyPack()
@@ -200,14 +200,14 @@ mob
 						heightZ = i.heightZ+i.heightSize
 						if(istype(src,/mob/living/carbon/human) && istype(src:shoes,/obj/item/clothing/shoes/brown/goomba_stomp))
 							i.specialloss += 15
-							playsound(src, 'hitJump.ogg', 100, 0, 12, 0)
+							playsound(src, 'sound/hitJump.ogg', 100, 0, 12, 0)
 							ySpeed = 3
 		var/obj/lattice/LAT = locate(/obj/lattice) in T
 		if(LAT)
 			if(ySpeed < 0)
 				if(heightZ < 0 && heightZ > -8)
 					if(ySpeed < -3)
-						playsound(LAT, 'bang.ogg', 100, 0, 5, 0)
+						playsound(LAT, 'sound/bang.ogg', 100, 0, 5, 0)
 						del LAT
 					else
 						onFloor = 1

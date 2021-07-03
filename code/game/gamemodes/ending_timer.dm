@@ -13,17 +13,17 @@ X < 97
 	if(nuke_enabled == 1)
 		nuke_timer -= tick_lag_original //Decrement!
 		if(nuke_timer < 41 && nuke_timer > 40)
-			world << sound('chaos dunk.ogg',channel=SOUND_CHANNEL_2)
+			world << sound('sound/chaos dunk.ogg',channel=SOUND_CHANNEL_2)
 		if(nuke_timer < 3.8 && nuke_timer > 3.7)
-			world << sound('oh no.ogg',channel=SOUND_CHANNEL_4)
+			world << sound('sound/oh no.ogg',channel=SOUND_CHANNEL_4)
 		if(nuke_timer < 3.8)
 			sinemult = sinemult * 1.01
 		if(nuke_timer < 3.5 && nuke_timer > 2.5)
-			world << sound('ass.ogg',channel=SOUND_CHANNEL_3)
+			world << sound('sound/ass.ogg',channel=SOUND_CHANNEL_3)
 		//world << "<font color='red'>[nuke_timer]"
 		if(nuke_timer < 0)
 			nuke_enabled = 2
-			world << sound('nice.ogg',channel=SOUND_CHANNEL_2)
+			world << sound('sound/nice.ogg',channel=SOUND_CHANNEL_2)
 		if(nuke_timer < 41)
 			sinemult = sinemult * -1
 			sinewave = 2+sin(nuke_timer*2) //dang
@@ -49,7 +49,7 @@ X < 97
 
 /datum/controller/gameticker/proc/nuke_enable()
 	if(nuke_enabled == 0)
-		world << sound('escape1.ogg',channel=MUSIC_CHANNEL,repeat=1)
+		world << sound('sound/escape1.ogg',channel=MUSIC_CHANNEL,repeat=1)
 		nuke_enabled = 1
 		call_shuttle_proc(src)
 

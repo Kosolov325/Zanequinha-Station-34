@@ -171,7 +171,7 @@
 		animation.name = "water"
 		animation.density = 0
 		animation.anchored = 1
-	icon = 'icons/mob/mob.dmi'
+		animation.icon = 'icons/mob/mob.dmi'
 		animation.icon_state = "liquify"
 		animation.layer = 5
 		animation.master = holder
